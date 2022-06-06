@@ -1,4 +1,3 @@
 [submodule "apidoctor"]
 	path = apidoctor
-	url = https://github.com/OneDrive/apidoctor.git
-	branch = addTabsForMissingSnippets
+	url = https://github.com/millicentachieng/apidoctor.git
