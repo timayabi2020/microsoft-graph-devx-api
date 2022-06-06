@@ -44,7 +44,7 @@ steps:
 
 - pwsh: |
     # override build languag incase provided in pipeline
-    $buildLanguages = if ("$env:LANGUAGES") { "$env:LANGUAGES" } else { "$(snippetLanguages)" }
+    $buildLanguages = "$(snippetLanguages)"
     $branchPrefix = if ("$env:LANGUAGES") { "preview-snippet-generation" } else { "snippet-generation" }
     Write-Host "##vso[task.setvariable variable=buildLanguages]$buildLanguages"
     Write-Host "##vso[task.setvariable variable=branchPrefix]$branchPrefix"
