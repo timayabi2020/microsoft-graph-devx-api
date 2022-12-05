@@ -148,7 +148,7 @@ namespace OpenAPIService
                                          SeverityLevel.Information,
                                          _openApiTraceProperties);
 
-            return CloneOpenApiDocument(subset);
+            return subset;
         }
 
         /// <summary>
@@ -694,10 +694,6 @@ namespace OpenAPIService
                                          SeverityLevel.Information,
                                          _openApiTraceProperties);
             _openApiTraceProperties.TryRemove(UtilityConstants.TelemetryPropertyKey_SanitizeIgnore, out string _);
-
-            // The output of ConvertToOpenApi isn't quite a valid OpenApiDocument instance,
-            // so we write it out, and read it back in again to fix it up.
-            document = CloneOpenApiDocument(document);
 
             return document;
         }

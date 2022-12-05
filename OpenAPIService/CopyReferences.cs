@@ -8,7 +8,7 @@ namespace OpenAPIService
     internal class CopyReferences : OpenApiVisitorBase
     {
         private readonly OpenApiDocument target;
-        public OpenApiComponents Components = new OpenApiComponents();
+        public OpenApiComponents Components = new();
 
         public CopyReferences(OpenApiDocument target)
         {
