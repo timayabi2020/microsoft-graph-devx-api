@@ -208,6 +208,8 @@ namespace CodeSnippetsReflection.OpenAPI.LanguageGenerators
                     snippetBuilder.AppendLine($"{indentManager.GetIndent()}}}{assignmentSuffix}");
                     break;
                 case PropertyType.Guid:
+                    snippetBuilder.AppendLine($"{propertyAssignment}Guid.Parse(\"{codeProperty.Value}\"){assignmentSuffix}");
+                    break;
                 case PropertyType.String:
                     snippetBuilder.AppendLine($"{propertyAssignment}\"{codeProperty.Value}\"{assignmentSuffix}");
                     break;
