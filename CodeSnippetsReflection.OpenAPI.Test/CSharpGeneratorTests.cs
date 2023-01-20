@@ -434,7 +434,7 @@ namespace CodeSnippetsReflection.OpenAPI.Test
             var result = _generator.GenerateCodeSnippet(snippetModel);
 
             // Assert `Directory` is replaced with `DirectoryObject`
-            Assert.Contains("await graphClient.DirectoryObject.AdministrativeUnits[\"administrativeUnit-id\"].ScopedRoleMembers.GetAsync()", result);
+            Assert.Contains("await graphClient.Directory.AdministrativeUnits[\"administrativeUnit-id\"].ScopedRoleMembers.GetAsync()", result);
         }
         
         [Fact]
